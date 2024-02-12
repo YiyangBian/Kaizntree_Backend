@@ -15,6 +15,8 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+STATICFILES_STORAGE = None
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -25,7 +27,8 @@ SECRET_KEY = 'django-insecure-4419njdrjc0hasw2dh(rxbta+21mfxp(#o&r552!yg6iur(^0a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['delightful-meadow-8be29bfcbb604a0e9c6416bfdbc3b106.azurewebsites.net']
+
 
 
 # Application definition
