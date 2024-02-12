@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib import messages  # 导入 Django 的消息框架
-# 在你的应用的 views.py 文件中添加
 from django.http import HttpResponse
 from .forms import LoginForm,CategoryForm,ItemForm
 from .models import Item, Category
