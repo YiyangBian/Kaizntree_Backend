@@ -205,12 +205,9 @@
         </table>
     </div>
     <!-- Modal for adding new category -->
-    <!-- Modal for adding new category -->
-    <!-- Modal for adding new category -->
     <div id="newCategoryModal" class="modal" style="display:none;">
         <div class="modal-content">
             <span class="close" onclick="closeModal('newCategoryModal')">&times;</span>
-            <!-- 注意'action'属性应该设置为处理表单数据的视图的URL -->
             <form method="post" action="{% url 'new_category' %}">
                 {% csrf_token %}
                 <label for="categoryName">Category Name:</label>
@@ -225,7 +222,6 @@
     <div id="newItemModal" class="modal" style="display:none;">
         <div class="modal-content">
             <span class="close" onclick="closeModal('newItemModal')">&times;</span>
-            <!-- 注意'action'属性应该设置为处理表单数据的视图的URL -->
             <form method="post" action="{% url 'new_item' %}">
                 {% csrf_token %}
                 <label for="itemSKU">SKU:</label>
@@ -242,7 +238,6 @@
                 <input type="number" id="itemStockQuantity" name="stock_quantity" required>
                 <label for="itemAvailableStock">Available Stock:</label>
                 <input type="number" id="itemAvailableStock" name="available_stock" required>
-                <!-- 添加更多的字段如有需要 -->
                 <input type="submit" value="Add Item">
             </form>
         </div>
@@ -293,8 +288,8 @@
         document.addEventListener('DOMContentLoaded', function () {
             const messages = document.getElementById('messages');
             if (messages && messages.innerText.trim().length > 0) {
-                alert(messages.innerText.trim()); // 显示弹窗提示
-                window.location.reload(); // 刷新页面
+                alert(messages.innerText.trim()); // Show popup prompt
+                window.location.reload(); // Refresh page
             }
 
             const searchInput = document.querySelector('.search-bar');
@@ -349,5 +344,4 @@
         }
     </script>
 </body>
-
 </html>

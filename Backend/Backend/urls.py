@@ -15,19 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import user_login,create_account,recover_password, dashboard,new_category,new_item  # 确保导入了你的视图
+from app.views import user_login,create_account,recover_password, dashboard,new_category,new_item 
 from django.contrib.auth.views import LogoutView
 from django.shortcuts import redirect
 
 
-# 定义一个用于重定向的视图函数，这样做比使用 lambda 函数更清晰
 def redirect_to_login(request):
     return redirect('login/', permanent=False)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', user_login, name='login'),  # 登录页面的 URL 没有改变
-    path('', redirect_to_login),  # 使用视图函数重定向根 URL 到登录页面
+    path('login/', user_login, name='login'),
+    path('', redirect_to_login), 
     path('create_account/', create_account, name='create_account'),
     path('recover_password/', recover_password, name='recover_password'),
     path('dashboard/', dashboard, name='dashboard'),
