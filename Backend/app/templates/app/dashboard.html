@@ -166,6 +166,8 @@
     <div class="main-content">
         <div class="dashboard-header">
             <h1>Item Dashboard</h1>
+            <a href="{% url 'logout' %}" class="btn logout-button">Logout</a>
+
         </div>
         <button class="btn" id="newCategoryButton">NEW ITEM CATEGORY</button>
         <button class="btn" id="newItemButton">NEW ITEM</button>
@@ -341,6 +343,10 @@
                 }
             });
         });
+
+        function logoutUser() {
+            window.location.href = 'logout'; // Redirect to login page
+        }
     </script>
 </body>
 

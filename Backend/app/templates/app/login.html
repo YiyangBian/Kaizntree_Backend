@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
     <div class="container mt-5">
         <div class="row justify-content-center">
@@ -31,12 +33,13 @@
                     <button type="submit" class="btn btn-primary">Login</button>
                 </form>
                 <div class="mt-3">
-                    <a href="{% url 'create_account' %}" class="btn btn-link">Create a new account</a>
+                    <a class="btn btn-link">Create a new account</a>
                     <span class="mx-2">|</span>
-                    <a href="{% url 'recover_password' %}" class="btn btn-link">Forgot password?</a>
+                    <a class="btn btn-link">Forgot password?</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>

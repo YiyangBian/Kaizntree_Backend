@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from app.views import user_login,create_account,recover_password, dashboard,new_category,new_item  # 确保导入了你的视图
-
+from django.contrib.auth.views import LogoutView
 from django.shortcuts import redirect
 
 
@@ -33,4 +33,5 @@ urlpatterns = [
     path('dashboard/', dashboard, name='dashboard'),
     path('new_category/', new_category, name='new_category'),
     path('new_item/', new_item, name='new_item'),
+    path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
 ]
